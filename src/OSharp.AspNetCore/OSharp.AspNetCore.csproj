@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>OSharpNS.AspNetCore</PackageId>
     <Summary>OSharp(.NetStandard2.0) AspNetCore组件</Summary>
     <Description>OSharp(.NetStandard2.0) AspNetCore组件，提供AspNetCore的服务端功能的封装</Description>
@@ -16,7 +15,7 @@
     <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0</DefineConstants>
   </PropertyGroup>
 
-  <Import Project="../../build/public.props" />
+  <Import Project="../../build/public.netstandard.props" />
   <Import Project="../../build/version.props" />
 
   <ItemGroup>

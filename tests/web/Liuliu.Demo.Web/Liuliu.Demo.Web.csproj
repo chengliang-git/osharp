@@ -1,19 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>柳柳软件(66soft.net)</Authors>
-    <Company>柳柳软件(66soft.net)</Company>
-    <Copyright>Copyright © 66SOFT 2014-2018</Copyright>
-    <PackageLicenseUrl>https://choosealicense.com/licenses/apache-2.0/</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/i66soft/osharp-ns20</PackageProjectUrl>
-    <PackageIconUrl>https://en.gravatar.com/userimage/140788132/0ff3b1e68fa0154337b1528c4276e276.png?size=80</PackageIconUrl>
-    <RepositoryUrl>https://github.com/i66soft/osharp-ns20</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>osharp</PackageTags>
-    <NeutralLanguage>zh-CHS</NeutralLanguage>
     <UserSecretsId>166558f9-be39-46bb-8d0c-1bfc1bc5f26f</UserSecretsId>
     <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
   </PropertyGroup>
@@ -27,19 +14,10 @@
     <NoWarn>1701;1702;1591;</NoWarn>
   </PropertyGroup>
 
+  <Import Project="../../../build/public.netcoreapp.props" />
   <Import Project="../../../build/version.props" />
 
   <ItemGroup>
-    <Compile Remove="Migrations\20190411051826_Init.cs" />
-    <Compile Remove="Migrations\20190411051826_Init.Designer.cs" />
-    <Compile Remove="Migrations\20190411052553_Init.cs" />
-    <Compile Remove="Migrations\20190411052553_Init.Designer.cs" />
-    <Compile Remove="Migrations\20190411060653_Init.cs" />
-    <Compile Remove="Migrations\20190411060653_Init.Designer.cs" />
-    <Compile Remove="Migrations\20190412091114_audit1.cs" />
-    <Compile Remove="Migrations\20190412091114_audit1.Designer.cs" />
-    <Compile Remove="Migrations\20190412143458_Audit1.cs" />
-    <Compile Remove="Migrations\20190412143458_Audit1.Designer.cs" />
     <Compile Remove="Startups\MySqlDefaultDbContextMigrationPack.cs" />
     <Compile Remove="Startups\MySqlDesignTimeDefaultDbContextFactory.cs" />
     <Compile Remove="Startups\OracleDefaultDbContextMigrationPack.cs" />
@@ -56,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="log\" />
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\upload-files\" />
@@ -90,5 +69,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

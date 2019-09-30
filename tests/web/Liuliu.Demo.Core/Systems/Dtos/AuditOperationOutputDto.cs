@@ -9,9 +9,11 @@
 
 using System;
 
-using OSharp.AspNetCore.UI;
+using Liuliu.Demo.Systems.Entities;
+
 using OSharp.Data;
 using OSharp.Entity;
+using OSharp.Mapping;
 
 
 namespace Liuliu.Demo.Systems.Dtos
@@ -19,6 +21,7 @@ namespace Liuliu.Demo.Systems.Dtos
     /// <summary>
     /// 输入DTO：操作审计信息
     /// </summary>
+    [MapFrom(typeof(AuditOperation))]
     public class AuditOperationOutputDto : IOutputDto
     {
         /// <summary>
